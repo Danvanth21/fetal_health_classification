@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title> Fetal Health Classification
+        </title>
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            background-color:#aa80ff;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative
+            }
+
+            
+            
+input[type=number], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color:#1f0538;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #4d1385;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+            
+        </style>
+    </head>
+     <body>
+
+     <center>
+        
+            <h2><u>Enter Details for Fetal Health Classification
+            </u></h2>
+            <form method="POST" action="/input">
+                <label for="baseline_value"><b>ENTER THE BASELINE VALUE </b> </label><br>
+                <input id = "baseline_value" type="text" name="baseline_value" placeholder="Range (106 : 160)"  required><br><br>
+                <label for="accelerations"><b>ENTER THE ACCELERATIONS </b> </label><br>
+                <input id = "accelerations" type="text" name="accelerations" placeholder="Range (0.000 : 0.019)"  required><br><br> 
+                <label for="fetal_movement"><b>ENTER THE FETAL MOVEMENT </b> </label><br>
+                <input id = "fetal_movement" type="text" name="fetal_movement" placeholder="Range (0.000 : 0.481)" required><br><br> 
+                <label for="uterine_contractions"><b>ENTER THE UTERINE CONTRACTIONS  </b></label><br>
+                <input id = "uterine_contractions" type="text" name="uterine_contractions" placeholder="Range (0.000 : 0.015)"  required><br><br> 
+                <label for="light_decelerations"><b>ENTER THE LIGHT DECELERATIONS </b> </label><br>
+                <input id = "light_decelerations" type="text" name="light_decelerations" placeholder="Range (0.000 : 0.015)"  required><br><br> 
+                <label for="severe_decelerations"><b>ENTER THE SEVERE DECELERATIONS</b>  </label><br>
+                <input id = "severe_decelerations" type="text" name="severe_decelerations" placeholder="Range (0.000 : 0.001)"  required>
+                <br><br>
+                <label for="prolongued_decelerations"><b>ENTER THE PROLONGUED DECELERATIONNS </b> </label><br>
+                <input id = "prolongued_decelerations" type="text" name="prolongued_decelerations" placeholder="Range (0.000 : 0.005)"  required><br><br>
+                <label for="abnormal_short_term_variability"><b>ENTER THE ABNORMAL SHORT TERM VARIABILITY </b> </label><br>
+                <input id = "abnormal_short_term_variability" type="text" name="abnormal_short_term_variability" placeholder="Range (12.00 : 87.00)"  required><br><br> 
+                <label for="mean_value_of_short_term_variability"><b>ENTER THE MEAN VALUE OF SHORT TERM VARIABILITY </b> </label><br>
+                <input id = "mean_value_of_short_term_variability" type="text" name="mean_value_of_short_term_variability" placeholder="Range (0.200 : 7.000)"  required><br><br> 
+                <label for="percentage_of_time_with_abnormal_long_term_variability"><b>ENTER THE PERRCENTAGE OF TIME WITH ABNORMAL LONG TERM VARIABILITY  </b></label><br>
+                <input id = "percentage_of_time_with_abnormal_long_term_variability" type="text" name="percentage_of_time_with_abnormal_long_term_variability" placeholder="Range (0.000 : 91.000)"  required><br><br> 
+                <label for="mean_value_of_long_term_variability"><b>ENTER THE MEAN VALUE OF LONG TERM VARIABILITY </b> </label><br>
+                <input id = "mean_value_of_long_term_variability" type="text" name="mean_value_of_long_term_variability" placeholder="Range (0.000 : 50.700)" required><br><br> 
+                <label for="histogram_width"><b>ENTER THE HISTOGRAM WIDTH</b>  </label><br>
+                <input id = "histogram_width" type="text" name="histogram_width" placeholder="Range (3:180)"  required>
+                <br><br>
+                <label for="histogram_min"><b>ENTER THE HISTOGRAM MIN </b> </label><br>
+                <input id = "histogram_min" type="text" name="histogram_min" placeholder="Range (50:159)"  required><br><br>
+                <label for="histogram_max"><b>ENTER THE HISTOGRAM MAX </b> </label><br>
+                <input id = "histogram_max" type="text" name="histogram_max" placeholder="Range (122:238)"  required><br><br> 
+                <label for="histogram_number_of_peaks"><b>ENTER THE HISTOGRAM NUMBER OF PEAKS </b> </label><br>
+                <input id = "histogram_number_of_peaks" type="text" name="histogram_number_of_peaks" placeholder="Range (0.000:18.000)"  required><br><br> 
+                <label for="histogram_number_of_zeroes"><b>ENTER THE HISTOGRAM NUMBER OF ZEROES  </b></label><br>
+                <input id = "histogram_number_of_zeroes" type="text" name="histogram_number_of_zeroes" placeholder="Range (0.000:10.000)"  required><br><br> 
+                <label for="histogram_mode"><b>ENTER THE HISTOGRAM MODE </b> </label><br>
+                <input id = "histogram_mode" type="text" name="histogram_mode" placeholder="Range (60:187)" required><br><br> 
+                <label for="histogram_mean"><b>ENTER THE HISTGRAM MEAN</b>  </label><br>
+                <input id = "histogram_mean" type="text" name="histogram_mean" placeholder="Range (73:182)"  required>
+                <br><br>
+                <label for="histogram_median"><b>ENTER THE HISTOGRAM MEDIAN </b> </label><br>
+                <input id = "histogram_median" type="text" name="histogram_median" placeholder="Range (77:186)" required><br><br>
+                <label for="histogram_variance"><b>ENTER THE HISTOGRAM VARIANCE </b> </label><br>
+                <input id = "histogram_variance" type="text" name="histogram_variance" placeholder="Range (0.000:269.000)"  required><br><br> 
+                <label for="histogram_tendency"><b>ENTER THE HISTOGRAM TENDENCY </b> </label><br>
+                <input id = "histogram_tendency" type="text" name="histogram_tendency" placeholder="Range (-1.000:1.000)" required><br><br> 
+          
+    
+                <input type="submit" value="SUBMIT">
+
+                
+            </form>
+        </center>
+    </body>
+</html>
